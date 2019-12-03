@@ -9,18 +9,18 @@ namespace Homework5
     {
         double tenderCash; //cash provided by customer, e.g. $200
         double change; //change should be returned to customer, e.g. if payment amount is $196, the customer provided $200, then he should get back $4
-        public Cash(double t, double c) 
+        public Cash(double amount, string paymentDate, double tenderCash):base(amount, paymentDate)
         {
-            tenderCash = t;
-            change = c;
+            this.tenderCash = tenderCash;
         }
         public double calcChange()
         {
-
+            change = tenderCash - amount;
+            return change;
         }
         public override string getPaymentType()
         {
-            return;
+            return "Cash";
         }
     }
 }

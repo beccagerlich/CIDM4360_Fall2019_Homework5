@@ -11,16 +11,21 @@ namespace Homework5
         string expDate; // expiration date
         string CHolderName; // card holder name
         string CType; //Visa,Mastercard,..
-        public CreditCard(string CardNum, string exDate, string CHName, string type)
+        public CreditCard(double amount, string paymentDate, string CCNum, string expDate, string CHolderName, string CType):base(amount, paymentDate)
         {
-            CCNum = CardNum;
-            expDate = exDate;
-            CHolderName = CHName;
-            CType = type;
+            this.CCNum = CCNum;
+            this.expDate = expDate;
+            this.CHolderName = CHolderName;
+            this.CType = CType;
+        }
+        public override bool verify()
+        {
+            Console.WriteLine("Credit Card Verified");
+            return true;
         }
         public override string getPaymentType()
         {
-            return;
+            return "Credit Card";
         }
     }
 }

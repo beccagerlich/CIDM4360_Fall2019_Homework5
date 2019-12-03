@@ -7,25 +7,26 @@ namespace Homework5
 {
     abstract class Payment
     {
-        double amount; //amount of this payment
+        private double amount; //amount of this payment
         string paymentDate; //date of this payment
-        public Payment(double a, string p)
+        public Payment(double amount, string paymentDate)
         {
-            amount = a;
-            paymentDate = p;
+            this.amount = amount;
+            this.paymentDate = paymentDate;
         }
 
         public double getAmount()
         {
-            return amount;
+            return this.amount;
         }
         public string getPaymentDate()
         {
-            return paymentDate;
+            return this.paymentDate;
         }
         public virtual bool verify()
         {
-
+            Console.WriteLine("Payment Verified");
+            return true;
         }
         public abstract string getPaymentType();
     }

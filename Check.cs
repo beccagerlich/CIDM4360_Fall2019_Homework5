@@ -10,15 +10,20 @@ namespace Homework5
         string Bank; // bank name
         string custName; // customer/client name
         string accNum; // account number
-        public Check(string b, string c, string num)
+        public Check(double amount, string paymentDate, string Bank, string custName, string accNum):base(amount, paymentDate)
         {
-            Bank = b;
-            custName = c;
-            accNum = num;
+            this.Bank = Bank;
+            this.custName = custName;
+            this.accNum = accNum;
+        }
+        public override bool verify()
+        {
+            Console.WriteLine("Signature and Account Balance Verified");
+            return true;
         }
         public override string getPaymentType()
         {
-            return;
+            return "Check";
         }
     }
 }

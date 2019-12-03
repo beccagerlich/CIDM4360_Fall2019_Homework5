@@ -11,16 +11,16 @@ namespace Homework5
         string description;
         double amount; //bill total amount
         
-        public Bill(string b, string d, double a)
+        public Bill(string billDate, string description, double amount)
         {
-            billDate = b;
-            description = d;
-            amount = a;
+            this.billDate = billDate;
+            this.description = description;
+            this.amount = amount;
         }
 
         public string getBillinfo()
         {
-            return ;
+            return "";
         }
         public double getBalance()
         {
@@ -28,7 +28,11 @@ namespace Homework5
         }
         public bool addPayment(Payment p)
         {
-            return ;
+            if(p.verify() == true)
+            {
+                
+            }
+            return true;
         }
     }
 }
