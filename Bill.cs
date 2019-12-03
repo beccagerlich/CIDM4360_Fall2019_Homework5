@@ -18,7 +18,7 @@ namespace Homework5
             this.amount = amount;
         }
 
-        public string getBillinfo()
+        public string getBillInfo()
         {
             return "";
         }
